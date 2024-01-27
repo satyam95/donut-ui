@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 
 const buttonStyles = cva(
   [
-    "w-full",
+    "w-min",
     "rounded-md",
     "font-semibold",
     "focus:outline-none",
@@ -16,34 +16,236 @@ const buttonStyles = cva(
   {
     variants: {
       variant: {
-        solid: "",
-        outline: "border-2",
-        ghost: "transition-colors duration-300",
+        solid: "text-white",
+        outline: "border",
+        ghost: "",
+        link: "",
       },
       size: {
+        xs: "px-2 py-0 text-sm",
         sm: "px-4 py-2 text-sm",
         md: "px-4 py-2 text-base",
         lg: "px-6 py-3 text-lg",
+      },
+      colorScheme: {
+        gray: "",
+        red: "",
+        orange: "",
+        yellow: "",
+        green: "",
+        teal: "",
+        blue: "",
+        cyan: "",
+        purple: "",
+        pink: "",
       },
     },
     compoundVariants: [
       {
         variant: "solid",
-        className: "text-white bg-primary-500 hover:bg-primary-600",
-      },
-      {
-        variant: "outline",
-        className:
-          "text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100",
+        colorScheme: "gray",
+        className: "bg-gray-100 text-gray-800 hover:bg-gray-200",
       },
       {
         variant: "ghost",
-        className: "text-primary-600 bg-transparent hover:bg-primary-100",
+        colorScheme: "gray",
+        className: "text-gray-500 hover:bg-gray-100",
+      },
+      {
+        variant: "outline",
+        colorScheme: "gray",
+        className: "border-gray-200 hover:bg-gray-100",
+      },
+      {
+        variant: "link",
+        colorScheme: "gray",
+        className: "hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "red",
+        className: "bg-red-500 hover:bg-red-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "red",
+        className: "text-red-500 hover:bg-red-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "red",
+        className: "border-red-500 text-red-500 hover:bg-red-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "red",
+        className: "text-red-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "orange",
+        className: "bg-orange-500 hover:bg-orange-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "orange",
+        className: "text-orange-500 hover:bg-orange-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "orange",
+        className: "border-orange-500 text-orange-500 hover:bg-orange-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "orange",
+        className: "text-orange-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "yellow",
+        className: "bg-yellow-500 hover:bg-yellow-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "yellow",
+        className: "text-yellow-500 hover:bg-yellow-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "yellow",
+        className: "border-yellow-500 text-yellow-500 hover:bg-yellow-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "yellow",
+        className: "text-yellow-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "green",
+        className: "bg-green-500 hover:bg-green-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "green",
+        className: "text-green-500 hover:bg-green-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "green",
+        className: "border-green-500 text-green-500 hover:bg-green-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "green",
+        className: "text-green-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "teal",
+        className: "bg-teal-500 hover:bg-teal-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "teal",
+        className: "text-teal-500 hover:bg-teal-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "teal",
+        className: "border-teal-500 text-teal-500 hover:bg-teal-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "teal",
+        className: "text-teal-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "blue",
+        className: "bg-blue-500 hover:bg-blue-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "blue",
+        className: "text-blue-500 hover:bg-blue-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "blue",
+        className: "border-blue-500 text-blue-500 hover:bg-blue-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "blue",
+        className: "text-blue-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "cyan",
+        className: "bg-cyan-500 hover:bg-cyan-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "cyan",
+        className: "text-cyan-500 hover:bg-cyan-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "cyan",
+        className: "border-cyan-500 text-cyan-500 hover:bg-cyan-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "cyan",
+        className: "text-cyan-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "purple",
+        className: "bg-purple-500 hover:bg-purple-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "purple",
+        className: "text-purple-500 hover:bg-purple-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "purple",
+        className: "border-purple-500 text-purple-500 hover:bg-purple-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "purple",
+        className: "text-purple-500 hover:underline p-0",
+      },
+      {
+        variant: "solid",
+        colorScheme: "pink",
+        className: "bg-pink-500 hover:bg-pink-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "pink",
+        className: "text-pink-500 hover:bg-pink-50",
+      },
+      {
+        variant: "outline",
+        colorScheme: "pink",
+        className: "border-pink-500 text-pink-500 hover:bg-pink-50",
+      },
+      {
+        variant: "link",
+        colorScheme: "pink",
+        className: "text-pink-500 hover:underline p-0",
       },
     ],
     defaultVariants: {
       variant: "solid",
       size: "md",
+      colorScheme: "blue"
     },
   }
 );
@@ -53,6 +255,7 @@ type ButtonProps = ComponentProps<"button"> &
     variant?: string;
     size?: string;
     isLoading?: boolean;
+    colorScheme?: string;
     leftIcon?: React.ReactElement;
     rightIcon?: React.ReactElement;
   };
@@ -64,6 +267,7 @@ const Button = ({
   className,
   disabled,
   children,
+  colorScheme,
   leftIcon,
   rightIcon,
   ...props
@@ -71,14 +275,22 @@ const Button = ({
   return (
     <button
       disabled={disabled || isLoading}
-      className={cn(buttonStyles({ variant, size, className }))}
+      className={cn(buttonStyles({ variant, size, className, colorScheme }))}
       {...props}
     >
       {isLoading && (
         <svg
           aria-hidden="true"
           role="status"
-          className="inline w-5 h-5 me-2 animate-spin"
+          className={`inline ${
+            size === "lg"
+              ? "w-4 h-4"
+              : size === "md"
+              ? "w-3 h-3"
+              : size === "sm"
+              ? "w-2.5 h-2.5"
+              : "w-2 h-2"
+          } me-2 animate-spin`}
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
