@@ -1,6 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps } from "react";
-import { cn } from "../../utils/cn";
+import { cn } from "../../../utils/cn";
 
 const buttonStyles = cva(
   [

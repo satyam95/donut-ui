@@ -1,5 +1,5 @@
 import { VariantProps, cva } from "class-variance-authority";
-import { cn } from "../../utils/cn";
+import { cn } from "../../../utils/cn";
 import { ComponentProps } from "react";
 
 const badgeStyles = cva(["rounded-sm", "p-1", "font-bold", "uppercase"], {
