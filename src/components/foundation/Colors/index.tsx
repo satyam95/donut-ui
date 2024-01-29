@@ -31,7 +31,7 @@ const Colors = () => {
         <Heading as="h2" size="md">
           Black & White
         </Heading>
-        <div className="grid grid-cols-3 gap-4s pt-6">
+        <div className="grid grid-cols-3 gap-4 pt-6">
           <Color colorName="Black" colorCode="#000" bgCode="bg-black" />
           <Color colorName="White" colorCode="#fff" bgCode="bg-white" />
         </div>
