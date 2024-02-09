@@ -11,3 +11,4 @@ export * from "./atoms/Avatar";
 export * from "./atoms/Input";
 export * from "./atoms/IconButton";
 export * from "./atoms/Progress";
+export * from "./atoms/Alert/Alert";
